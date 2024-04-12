@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../style.css">
+        <script>
+            $(document).ready(function () {
+                $('#logo').click(function () {
+                $('ul').toggleClass('show')
+              });
+              $('#crosslogo').click(function(){
+                $('ul').toggleClass('show')
+              });
+            });
+        </script>
+    </head>
+    <body>
+        <header class="NavMenu">
+            <div class="container">
+                <nav class="Navbar">
+                    <label class="weblogo">
+                        <img src="../Images/futureladderlogo.png" alt="futureladderlogo">
+                    </label>
+                    <ul>
+                        <label id="crosslogo">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                        </label>
+                        <li>
+                            <a href="#provideService">Services</a>
+                        </li>
+                        <li>
+                            <a href="#FAQ">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="connectUs">Contact Us</a>
+                        </li>
+                        <span class="text-center">
+                            <a href="#Enquiry" class="connectWith">Connect With Us</a>
+                        </span>
+                    </ul>
+                    <label id="logo">
+                        <i class="fa-solid fa-bars fa-xl"></i>
+                    </label>
+                </nav>
+            </div>
+        </header>
+        <section class="HomeBannerWrapper">
+            <div class="row w-100">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12"></div>
+                <div class="col-lg-6">
+                    <div class="topBannerRight">
+                        <h2 class="visaImmigrate">
+                            Hire The Best Visa And Immigration
+                            <span class="consultIndia"> Consultants In India</span>
+                        </h2>
+                        <div>
+                            <div class="row text-end mt-5">
+                                <div class="col-lg-6"></div>
+                                <div class="col-lg-6">
+                                    <div class="pathChoose">
+                                        <p class="pathChooseHead">Choose Your Path</p>
+                                        <span class="pathMenu">
+                                            <a href="">Study Visa</a>
+                                        </span>
+                                        <span class="pathMenu">
+                                            <a href="">Migrate Visa</a>
+                                        </span>
+                                        <span class="pathMenu">
+                                            <a href="">Tourist Visa</a>
+                                        </span>
+                                        <span class="pathMenu">
+                                            <a href="">Immigrate Visa</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="FormBox mb-5" id="exploreService">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 pt-4" id="Enquiry">
+                        <h2 class="Consultant">
+                            Book Your
+                            <span class="bookAppoint">Appointment</span>
+                        </h2>
+                        <form
+                            action="https://yourfutureladder.com/inquiry"
+                            id="myForm"
+                            name="myForm"
+                            method="post"
+                            onsubmit="return ladderformValidation()"
+                        >
+                            <input type="hidden" name="_token" value="OmKhYNjS0Y9eVSL8PLxsil5FqSFaKQyUiOevdXsl">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="FormMenu">
+                                        <label class="textLabel">Name</label>
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            id="name"
+                                            placeholder="Enter Name"
+                                        >
+                                        <span class="formErrror" id="errorFullname"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="FormMenu">
+                                        <label class="textLabel">Email</label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            placeholder="Enter Email"
+                                        >
+                                        <span class="formErrror" id="errorEmail"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="FormMenu">
+                                        <label class="textLabel">Phone Number</label>
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            id="phone"
+                                            placeholder="Enter Phone"
+                                            maxlength="10"
+                                        >
+                                        <span class="formErrror" id="errorPhone"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="FormMenu">
+                                        <label class="textLabel">Choose your Path</label>
+                                        <select name="subject" id="Path">
+                                            <option value="">Select Services</option>
+                                            <option value="Work Permit Visa">Work Permit Visa</option>
+                                            <option value="Dependent Visa">Dependent Visa</option>
+                                            <option value="Tourist Visa">Tourist Visa</option>
+                                            <option value="Study Visa">Study Visa</option>
+                                            <option value="Travel Visa">Travel Visa</option>
+                                            <option value="HealthCare Visa">HealthCare Visa</option>
+                                            <option value="Immigration Services">Immigration Services</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <div class="FormMenu">
+                                        <textarea
+                                            name="description"
+                                            id="Message"
+                                            cols="30"
+                                            rows="3"
+                                            placeholder="Message"
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="QueryNow">
+                                <button type="submit" class="enqueryImmediate">ENQUIRY NOW</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="FormLogo">
+                            <img src="../Images/FormLogo.png" alt="FormLogo">
+                        </label>
+                        <p class="AboutLogo">Study Abroad Online Counseling</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="studyVisaConsultant mb-5">
+            <div class="container">
+                <h2 class="studyVisaHead">
+                    India’s No.1 Immigration And Study Visa Consultants
+                </h2>
+                <label class="linelogo">
+                    <img src="../Images/linelogo.png" alt="linelogo">
+                </label>
+                <p class="studyVisaCont">
+                    We are a team of dedicated visa and immigration consultants committed to providing exceptional services to individuals and families seeking to explore the world, pursue educational opportunities, advance their careers, or reunite with loved ones across borders.
+                </p>
+                <p class="studyVisaCont">At Your Future Ladder, we understand that navigating the complexities of visa and immigration processes can be daunting. That's why we're here to simplify the journey for you. With our expertise, personalised approach, and unwavering commitment to excellence, we strive to make your dreams a reality.</p>
+                <a href="#Enquiry" class="Enquiryimmediate mb-4">ENQUIRY NOW</a>
+            </div>
+        </section>
+        <section class="migrationbgIndia mb-5">
+            <div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="leadinglogo">
+                            <img src="../Images/leadinglogo.png" alt="leadinglogo">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-3">
+                        <div class="righrSideBox">
+                            <h2 class="consultIndia">India’s Leading Immigration Consultancy</h2>
+                            <label class="linelogo">
+                                <img src="../Images/linelogo.png" alt="linelogo">
+                            </label>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="aboutLead mt-3">
+                                <div class="box1">
+                                    <h4 class="infocompany">852</h4>
+                                    <p class="totalwork">Projects Are Completed</p>
+                                </div>
+                                <div class="box2">
+                                    <h4 class="infocompany">900</h4>
+                                    <p class="totalwork">Give Singange Advice</p>
+                                </div>
+                                <div class="box3">
+                                    <h4 class="infocompany">630</h4>
+                                    <p class="totalwork">Clients Are Satisfy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="buisnessPartner">
+                    <img src="../Images/business partner.png" alt="buisnessPartner">
+                </div> -->
+            </div>
+        </section>
+        <section class="OurServices mb-5" id="provideService">
+            <div class="container">
+                <div class="TopHeadMenu">
+                    <p class="servicesCont">Our services</p>
+                    <h2 class="OurWork">What we Do</h2>
+                    <label class="linelogo">
+                        <img src="../Images/linelogo.png" alt="linelogo">
+                    </label>
+                </div>
+            </div>
+            <div class="seviceDetailsbg">
+                <div class="container">
+                    <div class="row m-auto mt-5">
+                        <div class="col-lg-6 mb-4">
+                            <div class="detailServiceProvide">
+                                <img src="../Images/service1.png" alt="service1">
+                                <h4 class="workDetail">Work Visa</h4>
+                                <p class="workDetailCont">Use our expert work visa services to confidently start your career adventure. Our group of knowledgeable experts will ensure correctness and efficiency by streamlining the application procedure. Put your trust in us to handle the complexities of work visa procedures so you can concentrate on taking advantage of interesting overseas employment prospects. Allow us to clear the path for your triumph in the international market.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="detailServiceProvide">
+                                <img src="../Images/service2.png" alt="service2">
+                                <h4 class="workDetail">Study Visa</h4>
+                                <p class="workDetailCont">With the help of our customised study visa services, realise your dreams of a college education. From prestigious colleges to language institutes, we help smooth visa applications by accurately directing you at every stage. You can pursue academic success at your chosen destination by putting your trust in our experience to assure compliance with study visa criteria. Allow us to assist you in starting a life-changing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="detailServiceProvide">
+                                <img src="../Images/service3.png" alt="service3">
+                                <h4 class="workDetail">Tourist Visa</h4>
+                                <p class="workDetailCont">With our committed tourist visa services, travel the world without any hassles. Our knowledgeable advisors expedite the application procedure to guarantee a stress-free and easy experience. You can concentrate on making priceless memories wherever you go by leaving the hassle of obtaining a tourist visa to us, whether you're planning a quick trip or a long-term journey. Allow us to make your vacation aspirations come true.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="detailServiceProvide">
+                                <img src="../Images/service4.png" alt="service4">
+                                <h4 class="workDetail">Immigration Visa</h4>
+                                <p class="workDetailCont">With the help of our extensive immigration visa services, you can successfully navigate the route to a new chapter in your life. Our team of professionals offers individualised advice and assistance from the first consultation to moving into your new residence during the immigration procedure. Put your trust in us to handle the intricacies of immigration rules and procedures, guaranteeing a seamless transition for you and your family.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Countries mb-5">
+        <div class="container">
+            <div>
+                <h2 class="counteryhead">Countries We Offer Our Services</h2>
+                <label class="linelogo">
+                    <img src="../Images/linelogo.png" alt="linelogo">
+                </label>
+            </div>
+            <div class="row">
+                <div class="row mt_15">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- featured-imagebox -->
+                        <div class="featured-imagebox featured-imagebox-portfolio style1">
+                            <div class="featured-imagebox-wrapper">
+                                <div class="featured-thumbnail">
+                                    <img
+                                        width="656"
+                                        height="484"
+                                        class="img-fluid"
+                                        src="../Images/01.jpg"
+                                        alt="image"
+                                    >
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>
+                                            <a href="france.html">France</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-imagebox end-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- featured-imagebox -->
+                        <div class="featured-imagebox featured-imagebox-portfolio style1">
+                            <div class="featured-imagebox-wrapper">
+                                <div class="featured-thumbnail">
+                                    <img
+                                        width="656"
+                                        height="484"
+                                        class="img-fluid"
+                                        src="../Images/02.jpg"
+                                        alt="image"
+                                    >
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>
+                                            <a href="england.html">England</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-imagebox end-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- featured-imagebox -->
+                        <div class="featured-imagebox featured-imagebox-portfolio style1">
+                            <div class="featured-imagebox-wrapper">
+                                <div class="featured-thumbnail">
+                                    <img
+                                        width="656"
+                                        height="484"
+                                        class="img-fluid"
+                                        src="../Images/03.jpg"
+                                        alt="image"
+                                    >
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>
+                                            <a href="russia.html">New Zealand</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-imagebox end-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- featured-imagebox -->
+                        <div class="featured-imagebox featured-imagebox-portfolio style1">
+                            <div class="featured-imagebox-wrapper">
+                                <div class="featured-thumbnail">
+                                    <img
+                                        width="656"
+                                        height="484"
+                                        class="img-fluid"
+                                        src="../Images/04.jpg"
+                                        alt="image"
+                                    >
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>
+                                            <a href="italy.html">Italy</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-imagebox end-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- featured-imagebox -->
+                        <div class="featured-imagebox featured-imagebox-portfolio style1">
+                            <div class="featured-imagebox-wrapper">
+                                <div class="featured-thumbnail">
+                                    <img
+                                        width="656"
+                                        height="484"
+                                        class="img-fluid"
+                                        src="../Images/05.jpg"
+                                        alt="image"
+                                    >
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>
+                                            <a href="russia.html">Russia</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-imagebox end-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- featured-imagebox -->
+                        <div class="featured-imagebox featured-imagebox-portfolio style1">
+                            <div class="featured-imagebox-wrapper">
+                                <div class="featured-thumbnail">
+                                    <img
+                                        width="656"
+                                        height="484"
+                                        class="img-fluid"
+                                        src="../Images/06.jpg"
+                                        alt="image"
+                                    >
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>
+                                            <a href="india.html">India</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-imagebox end-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- featured-imagebox -->
+                        <div class="featured-imagebox featured-imagebox-portfolio style1">
+                            <div class="featured-imagebox-wrapper">
+                                <div class="featured-thumbnail">
+                                    <img
+                                        width="656"
+                                        height="484"
+                                        class="img-fluid"
+                                        src="../Images/07.jpg"
+                                        alt="image"
+                                    >
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>
+                                            <a href="united-kingdom.html">United Kingdom</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-imagebox end-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- featured-imagebox -->
+                        <div class="featured-imagebox featured-imagebox-portfolio style1">
+                            <div class="featured-imagebox-wrapper">
+                                <div class="featured-thumbnail">
+                                    <img
+                                        width="656"
+                                        height="484"
+                                        class="img-fluid"
+                                        src="../Images/08.png"
+                                        alt="image"
+                                    >
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>
+                                            <a href="australia.html">Australia</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-imagebox end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="TestinomialsBox mb-5">
+        <div class="container">
+            <div>
+                <h2 class="testinomilas">Feedbacks Received From Our Clients</h2>
+                <label class="linelogo">
+                    <img src="../Images/linelogo.png" alt="linelogo">
+                </label>
+            </div>
+            <div class="MenuList mt-4 pb-4">
+                <div class="teste1box">
+                    <img src="../Images/testicoma.png" alt="testicoma">
+                    <p class="testipara">Outstanding assistance! From the time I contacted Your Future Ladder for advice until my visa was finally approved, they offered me unmatched assistance and direction. The entire procedure was stress-free and seamless because of their knowledge and attention to detail. Strongly advised.</p>
+                    <div>
+                        <span class="userName">Suraj Singh</span>
+                        <span>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="teste1box">
+                    <img src="../Images/testicoma.png" alt="testicoma">
+                    <p class="testipara">I am really grateful to Your Future Ladder for helping me with my immigration application. Their attention to detail and customised strategy for my case were absolutely amazing. They went above and above to allay my worries and guarantee a good result. I am contentedly situated in my new nation, all because of them!</p>
+                    <div>
+                        <span class="userName">Sonia Kapoor</span>
+                        <span>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="teste1box">
+                    <img src="../Images/testicoma.png" alt="testicoma">
+                    <p class="testipara">With this immigration and visa agency, I had an amazing experience. Their team was professional and efficient in guiding me through the full procedure. They gave me clear directions at every turn and were always accessible to answer my inquiries. I was able to easily and hassle-free obtain my visa because of their help.</p>
+                    <div>
+                        <span class="userName">Mayur</span>
+                        <span>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="teste1box">
+                    <img src="../Images/testicoma.png" alt="testicoma">
+                    <p class="testipara">I am really happy with the services this consultant has offered. They were really professional and knowledgeable during my immigration process. Their staff provided insightful analysis and recommendations catered to my particular circumstances, and they were informed about the most recent developments in immigration.</p>
+                    <div>
+                        <span class="userName">Ravi Taneja</span>
+                        <span>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="teste1box">
+                    <img src="../Images/testicoma.png" alt="testicoma">
+                    <p class="testipara">At first, I was kind of skeptical about seeing this hotel. But when I arrived, I know it was the best choice I'd made during my holiday! The staffs were friendly, the room was super clean and the lighting was super! I was able to successfully negotiate the complexity of the immigration process because of their advice.</p>
+                    <div>
+                        <span class="userName">Sarvesh</span>
+                        <span>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="teste1box">
+                    <img src="../Images/testicoma.png" alt="testicoma">
+                    <p class="testipara">At first, I was kind of skeptical about seeing this hotel. But when I arrived, I know it was the best choice I'd made during my holiday! The staffs were friendly, the room was super clean and the lighting was super! I heartily endorse their services to anyone in need of trustworthy immigration support.</p>
+                    <div>
+                        <span class="userName">Ajay Sharma</span>
+                        <span>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star fa-sm" style="color: #FFD43B;"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ChooseUs mb-5">
+        <div class="container">
+            <div>
+                <h2 class="testinomilas">Why Should You Choose Our Services?</h2>
+                <label class="linelogo">
+                    <img src="../Images/linelogo.png" alt="linelogo">
+                </label>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4 mb-4">
+                    <div class="Whychoosebox">
+                        <img src="../Images/choose1.png" alt="choose1">
+                        <h4 class="personalHead">Expertise</h4>
+                        <p class="personalCont">Our team of professionals is made up of seasoned experts with a wealth of knowledge in immigration and visa law. We keep up with the most recent laws</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="Whychoosebox">
+                        <img src="../Images/choose2.png" alt="choose1">
+                        <h4 class="personalHead">Personalised Approach</h4>
+                        <p class="personalCont">We are aware that each person has unique demands and situations. For this reason, we offer individualised consultations and solutions that carefully and meticulously meet your goals and problems.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="Whychoosebox">
+                        <img src="../Images/choose3.png" alt="choose1">
+                        <h4 class="personalHead">Comprehensive Support</h4>
+                        <p class="personalCont">We provide thorough assistance whether you're looking for a work visa, study permit, tourist visa, or want to immigrate to another nation. We support you at every step of the way, from preparing paperwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mb-5" id="contact">
+        <div>
+            <a href="#exploreService"></a>
+            <img src="../Images/visaimmigrationservice.png" alt="visaimmigrationservice" class="w-100">
+        </div>
+    </section>
+    <section class="studyVisaConsultant mb-5">
+        <div class="container mt-3">
+            <h2 class="studyVisaHead">
+                Top Rated Immigration Services In India
+            </h2>
+            <label class="linelogo">
+                <img src="../Images/linelogo.png" alt="linelogo">
+            </label>
+            <p class="studyVisaCont">
+                Your Future Ladder is the top rated visa-immigration services in India.We specialise in providing comprehensive and reliable solutions for individuals and businesses navigating the complex world of global mobility. With a commitment to excellence, integrity, and personalised service, we have earned a reputation as a top-tier provider of visa and immigration services, helping clients realise their dreams of international travel, work, study, and settlement.We specialise in processing a wide range of visa applications for locations across the globe, from work permits to tourist visas and everything in between. Our proficiency lies in managing the intricacies of visa prerequisites, paperwork, and application processes, thereby conserving our clients' invaluable time and energy.
+            </p>
+            <p class="studyVisaCont">Our dedication to providing individualised care and careful attention to detail is what makes us unique. Since every visa application is different, we customise our strategy to fit the demands and tastes of each individual client. We go above and beyond to guarantee a seamless and successful solution, whether that means offering advice on the requirements for obtaining a visa, helping with the completion of forms, or communicating with consular representatives.</p>
+            <p class="studyVisaCont">People, families, and companies looking for dependable support for their travel and immigration requirements rely on our highly regarded visa services in India because of our stellar reputation and proven track record of pleased clients. Allow us to relieve your anxiety regarding the visa application procedure so you can confidently start your journey.</p>
+        </div>
+        <div class="container">
+            <h2 class="studyVisaHead">
+                Most Trusted Visa Agency All Over India
+            </h2>
+            <label class="linelogo">
+                <img src="../Images/linelogo.png" alt="linelogo">
+            </label>
+            <p class="studyVisaCont">
+                Your Future Ladder Immigration services is considered as the most trusted visa agency all over India.The primary focus of our immigration services is to help students accomplish their dreams.With over ten years of expertise, we have overcome numerous obstacles to become a reliable name in the immigration field. We have assisted a sizable clientele from all over the world throughout the years, representing a wide range of nationalities. We firmly think that our clients are our partners in success, and we provide them with unparalleled assistance and knowledgeable direction at every stage.Therefore, Your Future Ladder is the last place you need to visit if you're looking for the greatest immigration and visa consultants. They are highly qualified and experienced.We have built our name on providing our clients with dependable support and outstanding service on a regular basis. We have established ourselves as the go-to option for both people and companies in need of help with their visa needs thanks to our in-depth knowledge of the intricacies of visa procedures and dedication to meeting their demands.
+            </p>
+            <p class="studyVisaCont">Our team of skilled experts is committed to offering individualised support that is catered to the particular needs of every customer. We use our experience to precisely and effectively negotiate the complexities of visa applications, whether it's obtaining a tourist visa for a dream trip, facilitating a business visa for overseas endeavours, or helping with immigration procedures.</p>
+            <p class="studyVisaCont">Our constant attention to reliability, integrity, and transparency is what makes us unique. We place a high value on open communication and make sure that our clients are aware of every development in the application process for a visa. We are dedicated to supporting our clients with expertise and sensitivity throughout the entire process, easing any worries or doubts they may have, from the first consultation to the last approval.</p>
+            <p class="studyVisaCont">Our proven track record and the confidence that innumerable happy clients have placed in us testify to our dedication to excellence. We are prepared to help you realise your travel and immigration goals with confidence and peace of mind thanks to our commitment to providing excellent service and our standing as the most reputable visa agency in India.</p>
+        </div>
+    </section>
+    <section class="Faqaccord" id="FAQ">
+        <div class="container">
+            <div>
+                <h2 class="faq">Frequently Asked Questions</h2>
+                <label class="linelogo">
+                    <img src="../Images/linelogo.png" alt="linelogo">
+                </label>
+            </div>
+            <div>
+                <div class="accordion mt-4 mb-3" id="accordionExample">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne"
+                                    >
+                                        What types of visas do you assist with?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our expertise lies in processing multiple categories of visas, such as business, student, work, family-sponsored, and tourist visas.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="collapseTwo"
+                                    >
+                                        What documents are required for visa applications?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        The documentation needed varies based on the kind of visa you're asking for and the laws of the country you plan to visit. A thorough checklist suited to your unique requirements will be given to you by our professionals.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="collapseThree"
+                                    >
+                                        How long does the visa application process take?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Visa processing times can vary significantly based on a number of factors, including the type of visa, the country to which you are applying, and the state of the application process at the moment.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix"
+                                        aria-expanded="false"
+                                        aria-controls="collapseSix"
+                                    >
+                                        What sets your visa and immigration services apart
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our individualised approach, meticulous attention to detail, and dedication to client satisfaction set us apart from the competition in our visa and immigration services. We provide specialised solutions, knowledgeable advice, and committed support at every stage of the procedure.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour"
+                                        aria-expanded="false"
+                                        aria-controls="collapseFour"
+                                    >
+                                        Can you help with visa renewals and extensions?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Yes, we provide assistance to customers in maintaining their legal status in their target country through visa extensions and renewals.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="copyright">
+        <div class="container">
+            <h4 class="copyHead">Copyright © 2024 by Your Future Ladder All rights reserved.</h4>
+        </div>
+    </section>
+    <script src="../script.js"></script>
+</body>
+</html>
