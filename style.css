@@ -2346,7 +2346,7 @@ div:hover>.prt-box-view-content-inner:before {
 
 /************WHAT DO SECTION START***************/
 
-.Whatdo img{
+.Whatdo img {
     width: 100%;
     height: 100%;
 }
@@ -2467,7 +2467,7 @@ div:hover>.prt-box-view-content-inner:before {
 
 /************BANNER BOX SECTION START***********/
 
-.Banner .immigrateBanner img{
+.Banner .immigrateBanner img {
     width: 100%;
     height: 100%;
 }
@@ -2496,7 +2496,208 @@ div:hover>.prt-box-view-content-inner:before {
     margin: auto;
 }
 
+/*************VISA TYPE SECTION START**************/
 
+.TopBanner .BannerWrapper img {
+    width: 100%;
+    height: 400px;
+}
+
+/***************VISA TYPE HERO BANNER SECTION START****************/
+
+.HeroBanner {
+    background-color: linear-gradient(to right, red, yellow);
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+
+.Herobanner .leftBoxwrapper .leftHead {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3;
+}
+
+/**************VISA TYPE WHY CHOOSE SECTION START**************/
+
+.VisaChooseUs .whychoosebg .chooseWrap {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.VisaChooseUs .whychoosebg .linelogo {
+    display: block !important;
+    width: 15%;
+    margin: auto;
+}
+
+.VisaChooseUs .whychoosebg .linelogo img {
+    width: 60%;
+    display: block;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.VisaChooseUs .visaChooselogo img {
+    width: 100%;
+}
+
+.VisaChooseUs .outerBoxSpace {
+    margin-left: -4rem;
+    margin-top: 4rem;
+}
+
+.VisaChooseUs .outerBoxSpace .boxcardBg {
+    background-color: #8CD4F6;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.VisaChooseUs .outerBoxSpace .boxcardBg .boxCardHead {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.VisaChooseUs .outerBoxSpace .boxcardBg ul {
+    padding: 15px;
+}
+
+.VisaChooseUs .outerBoxSpace .boxcardBg ul li {
+    list-style-type: decimal;
+    font-weight: 700;
+}
+
+/****************VISA BENEFITS SECTION START********************/
+
+.BenefitsVisa .leftpanelbenefit .leftbPra {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.BenefitsVisa .leftpanelbenefit .linelogo {
+    display: block !important;
+    width: 22%;
+}
+
+.BenefitsVisa .leftpanelbenefit .linelogo img {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.BenefitsVisa .leftpanelbenefit .leftinnerpara {
+    font-size: 1rem;
+    max-width: 400px;
+    line-height: 1.6;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.BenefitsVisa .leftpanelbenefit .VisaBenfitsConsult .getFreeConsult {
+    background-color: #FF0000;
+    border: none;
+    outline: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.BenefitsVisa .rightpanelbenefit .innerrightcard {
+    background-color: #8CD4F6;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: -10px -10px 0px 0px #129BAE;
+}
+
+.BenefitsVisa .rightpanelbenefit .innerrightcard .cardHeadcont {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/***************COMPANY HISTORY SECTION START*************/
+
+.CompanyHistory {
+    background-color: #F8F5EF;
+    width: 100%;
+    font-weight: 700;
+    padding-top: 1rem;
+}
+
+.CompanyHistory .HistoryInfo .InfoHead {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.CompanyHistory .HistoryInfo .linelogo {
+    display: block !important;
+    width: 15%;
+    margin: auto;
+}
+
+.CompanyHistory .HistoryInfo .linelogo img {
+    width: 60%;
+    display: block;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.CompanyHistory .HistoryInfo .historyIntro {
+    font-weight: 400;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.CompanyHistory .companyMissionbg {
+    background-color: #9DCDE4;
+    width: 100%;
+    padding: 2rem;
+}
+
+.CompanyHistory .companyMissionbg .misionvisonhead {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.CompanyHistory .companyMissionbg .misionvisoncont {
+    font-weight: 400;
+    max-width: 400px;
+    margin-top: 1rem;
+    margin: auto;
+}
+
+/***************VISA COUNTRY SERVICES SECTION START******************/
+
+.CountryServices .CountryWrapper .CountryHead {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.CountryServices .CountryWrapper .linelogo {
+    display: block !important;
+    width: 15%;
+    margin: auto;
+}
+
+.CountryServices .CountryWrapper .linelogo img {
+    width: 60%;
+    display: block;
+    margin-bottom: 5px;
+    margin: auto;
+}
 
 /*******************MEDIA QUERY START********************/
 
@@ -2624,6 +2825,35 @@ div:hover>.prt-box-view-content-inner:before {
         color: #FF0000;
         font-size: 1.8rem;
         text-align: start;
+    }
+
+    /***********VISA TYPE CSS START**************/
+    .TopBanner .BannerWrapper img {
+        height: 300px;
+    }
+
+    .VisaChooseUs .visaChooselogo img {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .VisaChooseUs .outerBoxSpace {
+        margin-left: 0rem;
+        margin-top: 1rem;
+    }
+
+    .VisaChooseUs .outerBoxSpace .boxcardBg {
+        text-align: center;
+        width: 100%;
+    }
+
+    .VisaChooseUs .outerBoxSpace .boxcardBg ul {
+        width: 25%;
+        margin: auto;
+    }
+
+    .VisaChooseUs .outerBoxSpace .boxcardBg ul li {
+        width: 0px;
     }
 }
 
