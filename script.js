@@ -39,7 +39,7 @@ const ladderformValidation = () => {
     } else {
         setclear();
     }
-    
+
     const Phone = document.forms['myForm']['phone'].value;
     if (!regexmobile.test(Phone)) {
         seterror("errorPhone", "Invalid phone number");
@@ -52,7 +52,16 @@ const ladderformValidation = () => {
     }
 
     return returnVal;
-}; 
- 
+};
 
-// SLICK CAROUSAL
+
+//Toggle Functionality Start
+
+function toggleSubMenu() {
+    var subMenu = document.querySelector('.sub-menu-1');
+    if (subMenu.style.display === 'none') {
+        subMenu.style.display = 'block';
+    } else {
+        subMenu.style.display = 'none';
+    }
+}

@@ -75,6 +75,60 @@ body {
     animation: popUp 2s infinite alternate;
 }
 
+.NavMenu .Navbar .sub-menu-1 {
+    display: none;
+}
+
+.NavMenu .Navbar .sub-menu-1 {
+    position: absolute;
+    background: #000;
+    margin-top: 0px;
+    margin-left: -15px;
+    z-index: 999;
+}
+
+.NavMenu .Navbar .sub-menu-1 ul {
+    display: block !important;
+    margin: 10px;
+    padding: 8px;
+}
+
+.NavMenu .Navbar .sub-menu-1 ul li {
+    width: 130px;
+    padding: 0px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    margin-bottom: 8px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavMenu .Navbar .sub-menu-1 ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.NavMenu .Navbar .sub-menu-1 ul li {
+    display: block;
+    line-height: 60px;
+    margin: -12px 0px;
+}
+
+.NavMenu .Navbar .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+    margin-bottom: -8px !important;
+}
+
+.NavMenu .Navbar .sub-menu-1 ul li a:hover {
+    border-bottom: none;
+}
+
 @keyframes popUp {
 
     0%,
@@ -2699,6 +2753,82 @@ div:hover>.prt-box-view-content-inner:before {
     margin: auto;
 }
 
+/***************FOOTER-BOX SECTION START**************/
+
+.FooterBanner {
+    background-color: #8CD4F6;
+    width: 100%;
+    height: 100%;
+}
+
+.FooterBanner .footer-widget {
+    margin: 50px 0px;
+}
+
+.FooterBanner .footer-widget .Textdecorate {
+    display: block;
+    border-bottom: 2px solid red;
+    width: 4em;
+    padding-top: 0;
+    margin-bottom: 1rem;
+}
+
+.FooterBanner .innerfwrapper {
+    color: #000 !important;
+}
+
+.FooterBanner .CompnayData .companyInfo {
+    color: #000;
+}
+
+.FooterBanner .CompnayData:hover .Textdecorate {
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.FooterBanner .CompnayData .CompanyWork {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.FooterBanner .CompnayData .CompanyWork:hover {
+    color: red;
+}
+
+.FooterBanner .CompnayData .CompnayInnerDataList ul {
+    padding: 0px;
+}
+
+.FooterBanner .CompnayData .CompnayInnerDataList ul li {
+    margin-bottom: 10px;
+}
+
+.FooterBanner .CompnayData .CompnayInnerDataList ul li .mainfwrapper {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.FooterBanner .CompnayData .CompnayInnerDataList ul li .mainfwrapper:hover {
+    color: red;
+}
+
+.FooterBanner .socialIcon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.FooterBanner .socialIcon i {
+    color: #ffffff;
+}
+
+.FooterBanner .socialIcon i:hover {
+    color: red;
+}
+
 /*******************MEDIA QUERY START********************/
 
 @media (max-width:992px) {
@@ -2734,7 +2864,7 @@ div:hover>.prt-box-view-content-inner:before {
 
     .Navbar ul li {
         display: block;
-        margin: 50px 0px;
+        margin: 40px 0px;
         line-height: 30px;
     }
 
