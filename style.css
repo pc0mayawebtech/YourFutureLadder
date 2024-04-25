@@ -240,7 +240,7 @@ body {
 .FormBox .FormMenu .textLabel {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #000;
 }
 
 .FormBox .QueryNow .enqueryImmediate {
@@ -1366,6 +1366,7 @@ div:hover>.prt-box-view-content-inner:before {
     display: block;
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .featured-imagebox-portfolio.style1 .featured-thumbnail img {
@@ -1929,6 +1930,26 @@ div:hover>.prt-box-view-content-inner:before {
     background-color: var(--base-white);
 }
 
+/**************CONSULTANT IMMIGRATION SECTION START*****************/
+
+.Consulatnt .testinomilas{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.Consulatnt .linelogo {
+    display: block !important;
+    width: 30%;
+    margin: auto;
+}
+
+.Consulatnt .linelogo img {
+    width: 30%;
+    display: block;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
 /*************TESTINOMIAL SECTION START****************/
 
 .TestinomialsBox {
@@ -1976,7 +1997,7 @@ div:hover>.prt-box-view-content-inner:before {
     border-bottom-right-radius: 50px;
     padding: 2rem;
     width: 90% !important;
-    margin: 45px 0px;
+    margin: 8px 0px;
     display: inline-block;
     position: relative;
 }
@@ -1994,6 +2015,7 @@ div:hover>.prt-box-view-content-inner:before {
 .TestinomialsBox .MenuList .teste1box .userName {
     margin-right: 12px;
 }
+
 
 /**************WHY CHOOSE US***************/
 
@@ -2113,7 +2135,7 @@ div:hover>.prt-box-view-content-inner:before {
 }
 
 .scheConsultant .scheconsultHead {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     color: #000000;
     text-align: start;
     font-weight: 600;
@@ -2203,7 +2225,7 @@ div:hover>.prt-box-view-content-inner:before {
 
 .VisaService .visaconsutHead {
     color: #004B84;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .VisaService .visaconsutCont {
@@ -2290,8 +2312,22 @@ div:hover>.prt-box-view-content-inner:before {
 .VisaApply .InnerABtbg .InnerParaCont {
     text-align: center;
     color: #ffffff;
-    max-height: 400px;
-    overflow-y: scroll;
+}
+
+.VisaApply .InnerABtbg .serviceInclude {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.VisaApply .InnerABtbg .iteminclude {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.itemAbt {
+    color: #ffffff;
 }
 
 .VisaApply .InnerABtbg .EnquiryVisa {
@@ -2333,11 +2369,13 @@ div:hover>.prt-box-view-content-inner:before {
 .Services .listHead {
     color: #282A29;
     margin-bottom: 0.8rem;
+    text-align: center;
 }
 
 .Services .listPara {
     color: #000000;
     margin-bottom: 1.2rem;
+    text-align: center;
 }
 
 .Services .readMore {
@@ -2348,11 +2386,42 @@ div:hover>.prt-box-view-content-inner:before {
     font-weight: 600;
     padding: 0.4rem 0.9rem;
     border-radius: 6px;
+    margin: auto;
+    display: block;
 }
 
 .Services .servicemorelogo {
     width: 90px;
-    margin-bottom: 0.8rem;
+    margin: auto;
+    display: block;
+}
+
+/**************COUNTRY SERVICE SECTION START**************/
+
+.contriesService .testinomilas {
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.contriesService .countryOffer .linelogo {
+    display: block !important;
+    width: 15%;
+    margin: auto;
+}
+
+.contriesService .countryOffer .linelogo img {
+    width: 60%;
+    display: block;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.contriesService .countryOffer ul .countryName {
+    list-style-type: disc;
+    color: #000;
+    font-weight: 500;
 }
 
 /*************TESTINOMIAL SECTION START**************/
@@ -2365,6 +2434,7 @@ div:hover>.prt-box-view-content-inner:before {
     left: 50%;
     right: 50%;
     transform: translate(-50px, -50px);
+    border-radius: 50%;
 }
 
 .TestinomialsBox .MenuList .teste1box .testicommadesign {
@@ -2566,10 +2636,10 @@ div:hover>.prt-box-view-content-inner:before {
     padding: 2rem;
 }
 
-.Herobanner .leftBoxwrapper .leftHead {
-    font-size: 3rem;
+.HeroBanner .leftBoxwrapper .leftHead {
+    font-size: 2.5rem;
     font-weight: 700;
-    line-height: 3;
+    line-height: 1.5;
 }
 
 /**************VISA TYPE WHY CHOOSE SECTION START**************/
@@ -2609,6 +2679,11 @@ div:hover>.prt-box-view-content-inner:before {
     padding: 2rem;
 }
 
+.VisaChooseUs .outerBoxSpace .boxcardBg:hover {
+    transform: scale(1.04);
+    transition: all .5s ease-in-out;
+}
+
 .VisaChooseUs .outerBoxSpace .boxcardBg .boxCardHead {
     font-size: 1.4rem;
     font-weight: 700;
@@ -2634,6 +2709,7 @@ div:hover>.prt-box-view-content-inner:before {
 .BenefitsVisa .leftpanelbenefit .linelogo {
     display: block !important;
     width: 22%;
+    margin: auto;
 }
 
 .BenefitsVisa .leftpanelbenefit .linelogo img {
@@ -2645,7 +2721,7 @@ div:hover>.prt-box-view-content-inner:before {
 
 .BenefitsVisa .leftpanelbenefit .leftinnerpara {
     font-size: 1rem;
-    max-width: 400px;
+    max-width: 700px;
     line-height: 1.6;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -2667,6 +2743,11 @@ div:hover>.prt-box-view-content-inner:before {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: -10px -10px 0px 0px #129BAE;
+}
+
+.BenefitsVisa .rightpanelbenefit .innerrightcard:hover {
+    transform: scale(1.04);
+    transition: all .5s ease-in-out;
 }
 
 .BenefitsVisa .rightpanelbenefit .innerrightcard .cardHeadcont {
@@ -2705,16 +2786,24 @@ div:hover>.prt-box-view-content-inner:before {
 
 .CompanyHistory .HistoryInfo .historyIntro {
     font-weight: 400;
-    max-width: 800px;
     margin: auto;
-    text-align: center;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .CompanyHistory .companyMissionbg {
     background-color: #9DCDE4;
     width: 100%;
     padding: 2rem;
+}
+
+.CompanyHistory .companyMissionbg:hover {
+    transform: scale(1.04);
+    transition: all .5s ease-in-out;
+}
+
+.CompanyHistory .companyMissionbg:hover {
+    transform: scale(1.04);
+    transition: all .5s ease-in-out;
 }
 
 .CompanyHistory .companyMissionbg .misionvisonhead {
@@ -2937,7 +3026,7 @@ div:hover>.prt-box-view-content-inner:before {
     }
 
     .TestinomialsBox .MenuList .teste1box {
-        width: 100%;
+        width: 100%!important;
     }
 
     /**********VISA SERVICES CSS START***********/

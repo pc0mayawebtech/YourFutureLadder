@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>Dependent Visa</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <header class="NavMenu">
+            <div class="container">
+                <nav class="Navbar">
+                    <label class="weblogo">
+                        <img src="../Images/futureladderlogo.png" alt="futureladderlogo">
+                    </label>
+                    <ul>
+                        <label id="crosslogo">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                        </label>
+                        <li class="showToggle" onclick="toggleSubMenu()">
+                            <a href="#">
+                                Visa
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <div class="sub-menu-1" style="display: none;">
+                                <ul>
+                                    <li>
+                                        <a href="./visa-type.html">Student Visa</a>
+                                    </li>
+                                    <li>
+                                        <a href="./visa-type.html">Tourist Visa</a>
+                                    </li>
+                                    <li>
+                                        <a href="./visa-type.html">Work Visa</a>
+                                    </li>
+                                    <li>
+                                        <a href="./visa-type.html">Healthcare Visa</a>
+                                    </li>
+                                    <li>
+                                        <a href="./visa-type.html">PR Visa</a>
+                                    </li>
+                                    <li>
+                                        <a href="./visa-type.html">Business Visa</a>
+                                    </li>
+                                    <li>
+                                        <a href="./visa-type.html">Dependent Visa</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./Visa-services.html">
+                                Immigration
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Blog
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="connectUs">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="./About.html" class="connectUs">About Us</a>
+                        </li>
+                        <span class="text-center">
+                            <a href="#Enquiry" class="connectWith">Connect With Us</a>
+                        </span>
+                    </ul>
+                    <label id="logo">
+                        <i class="fa-solid fa-bars fa-xl"></i>
+                    </label>
+                </nav>
+            </div>
+        </header>
+        <section class="TopBanner">
+            <div class="BannerWrapper">
+                <img src="../Images/visatypelogobg.png" alt="visatypelogobg">
+            </div>
+        </section>
+        <section class="HeroBanner FormBox mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mt-5">
+                        <div class="leftBoxwrapper">
+                            <h1 class="leftHead">
+                                Open the path of Medical Opportunities with Healthcare Visas
+                            </h1>
+                            <p class="mt-5">Our healthcare visa service providers make sure that medical attention has no borders. We set a standard for global healthcare services by combining compassion and efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5">
+                        <div>
+                            <h4>Select Your Appointment</h4>
+                            <form
+                                action="https://yourfutureladder.com/inquiry"
+                                id="myForm"
+                                name="myForm"
+                                method="post"
+                                onsubmit="return ladderformValidation()"
+                            >
+                                <input type="hidden" name="_token" value="OmKhYNjS0Y9eVSL8PLxsil5FqSFaKQyUiOevdXsl">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="FormMenu">
+                                            <label class="textLabel">Name</label>
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                id="name"
+                                                placeholder="Enter Name"
+                                            >
+                                            <span class="formErrror" id="errorFullname"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="FormMenu">
+                                            <label class="textLabel">Email</label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                placeholder="Enter Email"
+                                            >
+                                            <span class="formErrror" id="errorEmail"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="FormMenu">
+                                            <label class="textLabel">Phone Number</label>
+                                            <input
+                                                type="text"
+                                                name="phone"
+                                                id="phone"
+                                                placeholder="Enter Phone"
+                                                maxlength="10"
+                                            >
+                                            <span class="formErrror" id="errorPhone"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="FormMenu">
+                                            <label class="textLabel">Choose your Path</label>
+                                            <select name="subject" id="Path">
+                                                <option value="">Select Services</option>
+                                                <option value="Work Permit Visa">Work Permit Visa</option>
+                                                <option value="Dependent Visa">Dependent Visa</option>
+                                                <option value="Tourist Visa">Tourist Visa</option>
+                                                <option value="Study Visa">Study Visa</option>
+                                                <option value="Travel Visa">Travel Visa</option>
+                                                <option value="HealthCare Visa">HealthCare Visa</option>
+                                                <option value="Immigration Services">Immigration Services</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-lg-12">
+                                        <div class="FormMenu">
+                                            <textarea
+                                                name="description"
+                                                id="Message"
+                                                cols="30"
+                                                rows="3"
+                                                placeholder="Message"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="QueryNow">
+                                    <button type="submit" class="enqueryImmediate">Get FREE CONSULTANTS</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="VisaChooseUs mb-5">
+            <div class="whychoosebg">
+                <h2 class="chooseWrap">Our Services</h2>
+                <label class="linelogo">
+                    <img src="../Images/linelogo.png" alt="linelogo">
+                </label>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="visaChooselogo">
+                        <img src="../Images/visachooseus.png" alt="visachooseus">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="outerBoxSpace">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
+                                <div class="boxcardBg">
+                                    <h5 class="boxCardHead">Visa Consultation</h5>
+                                    <p>Our experienced team of visa experts is here to guide you through the visa application process from start to finish. We provide personalized consultations to assess your unique situation and visa options.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
+                                <div class="boxcardBg">
+                                    <h5 class="boxCardHead">Documentation Assistance</h5>
+                                    <p>Navigating the documentation requirements for medical visas can be complex. We're here to simplify the process by helping you gather and organize all the necessary documents, including medical records.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
+                                <div class="boxcardBg">
+                                    <h5 class="boxCardHead">Visa Application Submission</h5>
+                                    <p>Once your documentation is in order, we'll assist you in submitting your visa application to the relevant authorities. Our team will ensure that your application is complete and accurate.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="BenefitsVisa mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mt-5">
+                        <div class="leftpanelbenefit">
+                            <h2 class="mb-0">Keypoints for Health And Care Visa</h2>
+                            <label class="linelogo">
+                                <img src="../Images/linelogo.png" alt="linelogo">
+                            </label>
+                            <p class="leftinnerpara">The Health and Care Visa is a specific type of visa offered by the UK government to healthcare professionals who wish to work in the UK's National Health Service (NHS), social care sector, or for eligible NHS organizations. Here are the key points regarding the Health and Care Visa:</p>
+                            <div class="VisaBenfitsConsult">
+                                <button type="submit" class="getFreeConsult">Get FREE CONSULTANTS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5">
+                        <div class="rightpanelbenefit">
+                            <div class="row mb-3">
+                                <div class="col-lg-6">
+                                    <div class="innerrightcard">
+                                        <h4 class="cardHeadcont">Eligibility Criteria</h4>
+                                        <p>Healthcare professionals such as doctors, nurses, paramedics, and other healthcare workers, including social workers, who have a job offer from the NHS, an NHS supplier, or a social care provider that is registered with the Care Quality Commission.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="innerrightcard">
+                                        <h4 class="cardHeadcont">Sponsorship Requirement</h4>
+                                        <p>Applicants must have a job offer from a UK employer that holds a sponsor license issued by the UK Home Office. The employer must issue a Certificate of Sponsorship (COS) to the applicant before they can apply for the visa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="innerrightcard">
+                                        <h4 class="cardHeadcont">Fast-track Process</h4>
+                                        <p>The Health and Care Visa offers a fast-track immigration process, enabling healthcare professionals to start work in the UK more quickly. This includes reduced application fees and priority processing.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="innerrightcard">
+                                        <h4 class="cardHeadcont">English Language Requirement</h4>
+                                        <p>Applicants must demonstrate their proficiency in English by passing an approved English language test or by having an academic qualification that was taught in English.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <img src="../Images/visaimmigrationservice.png" alt="visaimmigrationservice" class="w-100">
+            </div>
+        </section>
+        <section class="CompanyHistory mb-5">
+            <div class="container">
+                <div class="HistoryInfo mb-5">
+                    <h2 class="InfoHead">About Us</h2>
+                    <label class="linelogo">
+                        <img src="../Images/linelogo.png" alt="linelogo">
+                    </label>
+                    <p class="historyIntro">At Your Future Ladder, we believe that everyone, regardless of geography, deserves access to high-quality healthcare. We are proud to be your wellness and health partner, offering healthcare visa services and direct ties to the NHS. Contact us right now to learn more about how we can assist you gain access to high-quality healthcare all over the world. This is where your journey to better health starts. Also, we make sure that every patient has the support they need to navigate the difficulties of receiving medical treatment while travelling overseas is our main objective. We are dedicated to offering individualized help and guidance at every level since we understand the challenges and uncertainty involved in receiving medical care abroad.</p>
+                </div>
+                <div class="HistoryInfo mb-5">
+                    <h2 class="InfoHead">Why Should You Choose Our Healthcare Visa Services with NHS Affiliation?</h2>
+                    <label class="linelogo mb-4">
+                        <img src="../Images/linelogo.png" alt="linelogo">
+                    </label>
+                    <h4>Streamlined Visa Processes</h4>
+                    <p class="historyIntro">We understand the urgency of healthcare needs and prioritize efficiency in visa processing. With direct links from the NHS, we navigate visa applications swiftly and seamlessly, minimizing administrative burdens and ensuring a smooth journey for our clients.</p>
+                    <h4>Personalized Care Coordination</h4>
+                    <p class="historyIntro">
+                        Our team works closely with NHS healthcare professionals to coordinate every aspect of your medical journey. From scheduling appointments to arranging accommodations, we tailor our services to meet your unique needs and preferences, ensuring a seamless and stress-free experience.
+                    </p>
+                    <h4>Comprehensive Support</h4>
+                    <p class="historyIntro">At Your Future Ladder, we provide comprehensive support at every stage of your healthcare journey. Whether you require assistance with documentation, travel arrangements, or post-treatment follow-up, our dedicated team is here to ensure your comfort and well-being every step of the way.</p>
+                    <h4>Trust and Reliability</h4>
+                    <p class="historyIntro">With our NHS affiliation, you can trust that you're in safe hands. The NHS is renowned for its commitment to excellence and patient care, and our partnership reflects our shared values of integrity, transparency, and compassion.</p>
+                    <h4>Access to Top-Quality Healthcare</h4>
+                    <p class="historyIntro">Our healthcare visa services open doors to top-quality medical care in leading healthcare destinations around the world. Patients can access advanced treatments, specialised procedures, and renowned medical experts to address their healthcare needs effectively.</p>
+                    <h4>Personalised Support</h4>
+                    <p class="historyIntro">We offer personalised support to every patient, tailoring our services to meet their individual needs and preferences. Whether it's assistance with documentation, travel arrangements, or post-treatment follow-up, our dedicated team is here to provide comprehensive support at every step of the journey.</p>
+                    <h4>Global Network</h4>
+                    <p class="historyIntro">With our extensive network of healthcare providers and partners worldwide, patients have access to a wide range of medical specialties and treatment options. Whether seeking treatment locally or internationally, we can connect patients with the right resources to meet their healthcare needs.</p>
+                </div>
+            </div>
+            <div class="HistoryInfo mb-5">
+                <div class="container">
+                    <h2 class="InfoHead">How Are We the Best Healthcare Visa Service Provider?</h2>
+                    <label class="linelogo">
+                        <img src="../Images/linelogo.png" alt="linelogo">
+                    </label>
+                    <p class="historyIntro">As the premier healthcare visa provider, we stand out for our commitment to excellence, reliability, and personalised service. With a dedicated team of experienced visa specialists, we ensure smooth and efficient processing of healthcare visas, minimising delays and ensuring a hassle-free experience for our clients. Our in-depth knowledge of visa regulations and requirements, coupled with our streamlined processes, allows us to provide high-quality solutions tailored to the unique needs of each patient. We prioritize transparency and clear communication, keeping our clients informed at every step of the process and providing guidance and support as needed. By going above and beyond to exceed expectations and deliver exceptional service, we have earned a reputation as the best healthcare visa provider, trusted by patients worldwide to facilitate their medical journeys with professionalism and care.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="companyMissionbg">
+                        <h4 class="misionvisonhead">Our Mission</h4>
+                        <p class="misionvisoncont">Our goal at Your Future Ladder Healthcare Visa Services is to make it easier for people to receive high-quality healthcare services anywhere in the world by offering individualized support and professional visa help. Our dedication lies in providing patients with the confidence to seek medical care overseas, without any hindrance regarding geographical locations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="companyMissionbg" style="background-color: #8CD4F6;">
+                        <h4 class="misionvisonhead">Our Vision</h4>
+                        <p class="misionvisoncont">At Your Future Ladder Healthcare Visa Services, we envision a society in which everyone, everywhere, has fair access to high-quality healthcare. In our ideal future, foreign medical travel will be easy to arrange, effective, and backed by a vast worldwide network of visa and healthcare professionals. We work to eliminate barriers to healthcare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Faqaccord" id="FAQ">
+        <div class="container">
+            <div>
+                <h2 class="faq">Frequently Asked Questions</h2>
+                <label class="linelogo">
+                    <img src="../Images/linelogo.png" alt="linelogo">
+                </label>
+            </div>
+            <div>
+                <div class="accordion mt-4 mb-3" id="accordionExample">
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne"
+                                aria-expanded="true"
+                                aria-controls="collapseOne"
+                            >
+                                How long does it take to obtain a healthcare visa?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                The processing time for healthcare visas varies depending on factors such as the destination country, the complexity of your medical treatment, and the efficiency of the visa application process. We strive to expedite the process as much as possible while ensuring accuracy and compliance with regulations.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo"
+                            >
+                                Can you assist with visa applications for my accompanying family members?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes, we can provide visa assistance for accompanying family members who will be travelling with you for medical treatment. We'll ensure that all necessary documentation is prepared and submitted for each member of your party, facilitating a smooth and coordinated travel experience.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                            >
+                                What happens if my visa application is denied?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                In the rare event that your visa application is denied, our team will work closely with you to understand the reason for the denial and explore alternative options. Depending on the circumstances, we may assist with reapplying for the visa or exploring other avenues for accessing medical care.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix"
+                            >
+                                Do you provide help with booking housing and travel?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Absolutely, we provide extra services to improve your medical travel experience in addition to aiding with obtaining a visa. This includes helping you arrange accommodations close to the medical center of your choice, booking flights, and arranging local transportation as needed. Ensuring a smooth and stress-free experience is our ultimate goal.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour"
+                                aria-expanded="false"
+                                aria-controls="collapseFour"
+                            >
+                                What is the benefit of getting a health and care visa?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                There are various benefits that come with taking health and care visas. The working professionals come with the benefits of working directly in their preferred country as a working professional just by having a healthcare visa in their hands.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive"
+                                aria-expanded="false"
+                                aria-controls="collapseFive"
+                            >
+                                Could the healthcare visa assist with including the family members?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes, the healthcare visa could include your family members in the visa and allow you to have the assistance with including your family members.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <div class="FooterBanner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3 footer-widget">
+                                    <div class="CompnayData">
+                                        <h5 class="companyInfo">Quick Links</h5>
+                                        <span class="Textdecorate"></span>
+                                        <div class="CompnayInnerDataList">
+                                            <ul>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">Home</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">Visa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">Immigration</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">Blog</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">Contact Us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">About Us</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 footer-widget">
+                                    <div class="CompnayData">
+                                        <h5 class="companyInfo">Top Visa Searches</h5>
+                                        <span class="Textdecorate"></span>
+                                        <div class="CompnayInnerDataList">
+                                            <ul>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Student Visa
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Tourist Visa
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Work Visa
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        HealthCare Visa
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        PR Visa
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Buisness Visa
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Dependent Visa
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 footer-widget">
+                                    <div class="CompnayData">
+                                        <h5 class="companyInfo">Countries We Serve</h5>
+                                        <span class="Textdecorate"></span>
+                                        <div class="CompnayInnerDataList">
+                                            <ul>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        United States
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        United Kingdom
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Canada
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Australia
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Germany
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        France
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Japan
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        China
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="mainfwrapper">
+                                                        Russia
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 footer-widget">
+                                    <div class="CompnayData mb-5">
+                                        <h5 class="companyInfo">Contact Us</h5>
+                                        <span class="Textdecorate"></span>
+                                        <div class="CompnayInnerDataList">
+                                            <ul>
+                                                <li>
+                                                    <a href="https://www.google.com/maps/search/A-44,+Sector+-2,+Noida-201301+Uttar+Pradesh/@28.5867058,77.2694719,12z/data=!3m1!4b1?entry=ttu" class="mainfwrapper">
+                                                        <i class="fa-solid fa-location-dot"></i>
+                                                        G04, A44 Sector-2, VDS Building, Noida-201301
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="tel:+91-9315969524" class="mainfwrapper">
+                                                        <i class="fa-solid fa-phone"></i>
+                                                        +91 8810377633
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="mailto:info@mayawebtech.com" class="mainfwrapper">
+                                                        <i class="fa-solid fa-envelope"></i>
+                                                        yourfutureladder@gmail.com
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="socialIcon">
+                                        <Link to="https://www.facebook.com/yourfutureladder/">
+                                        <i class="fa-brands fa-facebook fa-xl"></i>
+                                        </Link>
+                                        <Link to="https://www.linkedin.com/in/yourfutureladder/">
+                                        <i class="fa-brands fa-instagram fa-xl"></i>
+                                        </Link>
+                                        <Link to="https://www.instagram.com/_your_future_ladder_/">
+                                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <section class="copyright">
+                    <div class="container">
+                        <h4 class="copyHead">Copyright © 2024 by Your Future Ladder All rights reserved.</h4>
+                    </div>
+                </section>
+                <script src="../script.js"></script>
+            </body>
+        </html>
